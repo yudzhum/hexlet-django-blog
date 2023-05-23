@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul>
+    <li>
+        <a href="{% url 'article:detail' article.id %}">{{ article.name }}</a>
+    <li>
+    <li>{{ article.body }}</li>
+</ul>
+{% endblock %}

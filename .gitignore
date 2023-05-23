@@ -27,8 +27,9 @@ wheels/
 
 # enviroment
 .venv/
+.env
 
-#tests
+# tests
 .coverage
 coverage.xml
 .pytest_cache/
