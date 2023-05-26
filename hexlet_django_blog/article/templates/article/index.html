@@ -16,5 +16,9 @@
         <h2>{{ article.name }}</h2>
         <div>{{ article.body|slice:":200" }}</div>
         <a href="{% url 'article:article_update' id=article.id %}">edit</a>
+        <form action="{% url 'article:article_destroy' id=article.id %}" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Delete">
+        </form>
     {% endfor %}
 {% endblock %}
